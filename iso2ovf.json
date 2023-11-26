@@ -2,10 +2,8 @@
     "builders": [
       {
         "boot_wait": "5s",
-        "disk_size": "{{user `disk_size`}}",
         "guest_additions_mode": "disable",
         "output_directory": "/root/packer-ubuntu/output-ova",
-        "guest_os_type": "Ubuntu_64",
         "headless": "{{user `headless`}}",
         "name": "{{ user `build_name` }}-vbox",
         "shutdown_command": "echo 'vagrant' | sudo -S poweroff",
@@ -93,5 +91,3 @@
       "previous_ova": "/root/source/ubuntu-1604-vbox.ova"
     }
   }
-  
-  
